@@ -4,6 +4,20 @@ public class Personagem {
     private int mana;
     private int nivel;
 
+    public Personagem(String nome,
+                      int hp,
+                      int mana,
+                      int nivel) {
+        this.nome = nome;
+        this.hp = hp;
+        this.mana = mana;
+        this.nivel = nivel;
+
+    }
+    public Personagem() {
+
+    }
+
     public String getNome() {
         return nome;
     }
@@ -23,5 +37,25 @@ public class Personagem {
                 " de dano! HP atual: "+
                 this.hp);
         return retorno;
+    }
+
+    public void usarHabilidade(String habilidade,
+                               int custoMana) {
+        if (this.mana >= custoMana) {
+            this.mana -= custoMana;
+            System.out.println(this.nome + " usou " + habilidade + "! Mana restante: " + this.mana);
+        } else {
+            System.out.println(this.nome + " não tem mana suficiente para usar " + habilidade + "!");
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Personagem{" +
+                "nome='" + nome + '\'' +
+                ", hp=" + hp +
+                ", mana=" + mana +
+                ", nivel=" + nivel +
+                '}';
     }
 }
