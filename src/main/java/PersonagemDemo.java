@@ -10,11 +10,13 @@ public class PersonagemDemo {
                 100,
                 100,
                 10);
-        p1.setNome("Geralt");
+        p1.setNome("Geralt \uD83D\uDE01");
         System.out.println(p1.getNome());
 
         System.out.println(p1);
         System.out.println(p2);
+
+        System.out.println("\uD83D\uDE01");
 //        p1.nome = "Geralt";
 //        p1.hp = 100;
 //        p1.mana = 100;
